@@ -1,0 +1,22 @@
+package exercicios;
+
+public class ExercicioVariavel {
+
+	public static void main(String[] args) {
+String nome = "João";
+int idade = 20;
+double peso = 51.5;
+double alt = 1.75;
+
+
+
+System.out.println("O funcionário "+ nome+" tem =" );
+System.out.println("Peso:"+peso+"\nAltura:"+alt+"\nIdade: "+idade);
+
+
+	
+	
+	
+	
+	}
+}

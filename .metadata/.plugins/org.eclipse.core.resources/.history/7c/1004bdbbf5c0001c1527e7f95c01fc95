@@ -1,0 +1,21 @@
+package br.com.serratec.entidade;
+
+// PolicialFederal não pode ser usado como super classe ou classe mãe!
+public final class PolicialFederal extends Policial {
+
+	private String unidade;
+
+	public PolicialFederal(String nome, String registro, String unidade) {
+		super(nome, registro);
+		this.setUnidade(unidade);
+	}
+
+	public String getUnidade() {
+		return unidade;
+	}
+
+	public void setUnidade(String unidade) {
+		this.unidade = unidade;
+	}
+
+}

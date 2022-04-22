@@ -1,0 +1,40 @@
+package E1;
+
+public class TV {
+
+	private double polegadas;
+	private String modelo;
+	private String marca;
+
+	public TV(double polegadas, String modelo, String marca) {
+		super();
+		this.polegadas = polegadas;
+		this.modelo = modelo;
+		this.marca = marca;
+	}
+
+	public double getPolegadas() {
+		return polegadas;
+	}
+
+	public void setPolegadas(double polegadas) {
+		this.polegadas = polegadas;
+	}
+
+	public String getModelo() {
+		return modelo;
+	}
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+
+	public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+}

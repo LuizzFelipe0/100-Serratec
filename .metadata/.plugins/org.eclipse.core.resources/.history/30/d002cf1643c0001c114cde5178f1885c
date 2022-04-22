@@ -1,0 +1,36 @@
+package entidade1;
+
+import interfaces1.Autenticacao;
+
+public class Diretor extends Funcionario implements Autenticacao{
+
+	private String categoria;
+	
+	public Diretor(String nome, double salario, String categoria) {
+		super(nome, salario);
+		this.categoria = categoria;
+		
+	}
+
+	public String getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
+	}
+
+	@Override
+	public String toString() {
+		return "Diretor [categoria=" + categoria + ", nome=" + nome + ", cpf=" + cpf + ", salario=" + salario + "]";
+	}
+
+	@Override
+	public boolean autenticar(String senha) {
+		// TODO Auto-generated method stub
+		return senha.equals("joker7");
+	}
+	
+	
+
+}

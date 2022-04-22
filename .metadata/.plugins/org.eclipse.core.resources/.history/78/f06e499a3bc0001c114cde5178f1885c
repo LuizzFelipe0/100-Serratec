@@ -1,0 +1,18 @@
+package entidade1;
+
+public class Gerente extends Funcionario{
+	private String nivel;
+
+	public Gerente(String nome, double salario) {
+		super(nome, salario);
+	}
+
+	@Override
+	public String toString() {
+		return "Gerente [nivel=" + nivel + ", nome=" + nome + ", cpf=" + cpf + ", salario=" + salario + "]";
+	}
+
+	
+	
+
+}

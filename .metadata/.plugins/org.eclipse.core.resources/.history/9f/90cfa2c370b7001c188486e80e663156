@@ -1,0 +1,17 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String nome = "João";
+	    int n1 = 9,n2 = 9,n3 = 9,n4 = 9;
+	    
+		
+		System.out.println( nome +" teve média:\n");
+		System.out.println(n1+n2+n3+n4/4);
+		
+
+	}
+
+}

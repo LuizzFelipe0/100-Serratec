@@ -1,0 +1,15 @@
+package dominio1;
+
+import E1.TV;
+import enums.MarcasTV;
+
+public class TVMain {
+
+	public static void main(String[] args) {
+
+		TV samsung07 =  new TV(42,"QLED-07",MarcasTV.SAMSUMG);
+		
+		System.out.println(samsung07);
+	}
+
+}

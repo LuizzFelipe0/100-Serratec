@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="entities.Aluno"/>
+    <fullyQualifiedTypeName name="exercicios.ClasseDeposito"/>
+    <fullyQualifiedTypeName name="exercicios.Conta"/>
+    <fullyQualifiedTypeName name="br.com.serratec.entidade.Pessoa"/>
+    <fullyQualifiedTypeName name="br.com.serratec.entidade.Imovel"/>
+    <fullyQualifiedTypeName name="entidade1.Funcionario"/>
+    <fullyQualifiedTypeName name="entidade1.Assistente"/>
+    <fullyQualifiedTypeName name="entidade1.Gerente"/>
+    <fullyQualifiedTypeName name="entidade1.Diretor"/>
+    <fullyQualifiedTypeName name="interfaces1.Autenticacao"/>
+    <fullyQualifiedTypeName name="entidade1.Emprestimo"/>
+    <fullyQualifiedTypeName name="interfaces1.AutenticacaoFuncionarios"/>
+    <fullyQualifiedTypeName name="interfaces1.Emprestimo"/>
+    <fullyQualifiedTypeName name="entidadesImovel.Imovel"/>
+    <fullyQualifiedTypeName name="entidadesImovel.Casa"/>
+    <fullyQualifiedTypeName name="entidadesImovel.Apto"/>
+    <fullyQualifiedTypeName name="entidadesImovel.Proprietario"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="br.com.serratec.entidade.Policial"/>
+    <fullyQualifiedTypeName name="br.com.serratec.entidade.PolicialFederal"/>
+    <fullyQualifiedTypeName name="enums.MarcasTV"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+</qualifiedTypeNameHistroy>

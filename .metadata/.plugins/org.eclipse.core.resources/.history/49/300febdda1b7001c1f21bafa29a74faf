@@ -1,0 +1,37 @@
+package exercicios;
+
+public class ExemploMaioridade {
+
+	public static void main(String[] args) {
+		int idade = 10;
+		
+		if(idade == 18) {
+			System.out.println("Pessoa com 18 anos");	
+		}
+		
+		else if (idade > 18) {
+			System.out.println("Pessoa com mais de 18 anos");
+		}
+			else {
+				System.out.println("Pessoa com menos de 18 anos");
+			}
+		
+		//EXEMPLO DO PROFESSOR ==> 
+		
+		System.out.println("-----------------------------------------------");
+		
+		// idade igual a 18 OU idade == 65
+				if (idade == 18 || idade == 65) {
+					System.out.println("Chegou numa idade de mudanças hein");
+				}
+				else if (idade > 65) {
+					System.out.println("A pessoa pode se aposentar");
+				}
+				// idade maior ou igual a 16 E idade menor que 65
+				else if (idade >= 16 && idade < 65) {
+					System.out.println("A pessoa está no período ativo profissional");
+			
+		
+	}
+
+}

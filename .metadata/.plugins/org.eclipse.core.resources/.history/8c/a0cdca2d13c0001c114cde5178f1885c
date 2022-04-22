@@ -1,0 +1,75 @@
+package GeterSetter;
+
+public class Pedido {
+
+	private int numero;
+	private String dataPedido;
+	private double quantidade;
+	private double valor;
+	private double total = quantidade * valor;
+
+	public Pedido(int numero, String dataPedido, double quantidade, double valor) {
+		this.numero = numero;
+		this.dataPedido = dataPedido;
+		this.quantidade = quantidade;
+		this.valor = valor;
+
+	}
+
+	public void calcularTotal(String dataPedido) {
+
+		double Desconto = total * 0.10;
+		double totalDesconto = (total - Desconto);
+
+		if (this.dataPedido != "Domingo" || this.dataPedido != "DOMINGO" || this.dataPedido != "domingo") {
+			System.out.println("O pedido de número, " + numero + "realizado no dia " + dataPedido + " teve o total de "
+					+ totalDesconto + " reais," + " devido ao desconto de Domingo de 10% no total da compra!");
+
+		} else {
+
+			System.out.println("O pedido de número, " + numero + "realizado no dia " + dataPedido + " teve o total de "
+					+ total + " reais.");
+		}
+	}
+
+	public int getNumero() {
+		return numero;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	public String getDataPedido() {
+		return dataPedido;
+	}
+
+	public void setDataPedido(String dataPedido) {
+		this.dataPedido = dataPedido;
+	}
+
+	public double getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(double quantidade) {
+		this.quantidade = quantidade;
+	}
+
+	public double getValor() {
+		return valor;
+	}
+
+	public void setValor(double valor) {
+		this.valor = valor;
+	}
+
+	public double getTotal() {
+		return total;
+	}
+
+	public void setTotal(double total) {
+		this.total = total;
+	}
+
+}

@@ -1,0 +1,19 @@
+package exercicios;
+
+public class ExemploMaioridade {
+
+	public static void main(String[] args) {
+		int idade =30;
+		
+		if(idade >= 18) {
+			System.out.println("Aprovado!");
+			
+		}
+	
+		else {
+		System.out.println("Reprovado!");
+		}
+		
+	}
+
+}

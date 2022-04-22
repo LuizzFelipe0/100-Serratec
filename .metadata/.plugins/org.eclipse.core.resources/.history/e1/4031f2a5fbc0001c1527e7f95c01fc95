@@ -1,0 +1,5 @@
+package enums;
+
+public enum MarcasTV {
+	SAMSUMG,LG,PHILCO,SONY,PANASONIC, SEMP_TOSHIBA,CCE;
+}

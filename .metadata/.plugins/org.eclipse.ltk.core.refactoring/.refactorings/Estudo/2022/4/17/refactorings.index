@@ -1,0 +1,15 @@
+1650292317302	Rename type 'IMC'
+1650293082280	Encapsulate field 'idPessoa'
+1650293264882	Encapsulate field 'altura'
+1650293272418	Encapsulate field 'peso'
+1650293277339	Encapsulate field 'nome'
+1650295251963	Encapsulate field 'cod'
+1650298585581	Encapsulate field 'valor'
+1650298757302	Infer generic type arguments
+1650298773120	Delete element
+1650480787840	Delete element
+1650481750918	Encapsulate field 'valorImovel'
+1650483008613	Encapsulate field 'garagem'
+1650483521224	Encapsulate field 'andar'
+1650483575699	Encapsulate field 'nome'
+1650483661599	Encapsulate field 'imovel'

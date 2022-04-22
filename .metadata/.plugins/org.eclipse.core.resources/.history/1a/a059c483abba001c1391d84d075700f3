@@ -1,0 +1,28 @@
+package exercicios;
+
+public class ClasseDeposito {
+
+	public static void main(String[] args) {
+		
+		Conta c = new Conta();
+		c.titular = "Luiz Felipe";
+		c.numero = 89595;
+		c.saldo = 7200;
+		c.deposito(110);
+		if (c.saque(1000)) {
+			System.out.println("Saque Realizado!");
+			System.out.println("Saldo atual: "+ c.saldo);
+			
+		}else {
+				System.out.println("Saldo Insuficiente!");
+
+			}
+
+		}
+		
+		
+		
+		
+	}
+
+

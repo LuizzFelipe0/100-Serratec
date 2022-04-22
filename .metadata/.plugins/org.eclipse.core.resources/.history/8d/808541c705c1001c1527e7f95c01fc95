@@ -1,0 +1,26 @@
+package dominioTV;
+
+import java.util.Scanner;
+
+import E1.TV;
+import enums.MarcasTV;
+
+public class TVMain {
+
+	public static void main(String[] args) {
+		
+		Scanner entrada = new Scanner(System.in);
+		
+		System.out.println("Insira a marca da TV:");
+		String nomeMarca = entrada.nextLine();
+		
+		TV samsung07 =  new TV(42,"QLED-07", nomeMarca); // MarcasTV.values()[0] <-- Mesma coisa 
+		
+		System.out.println(samsung07);
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,22 @@
+package one;
+
+public class Main {
+	  
+	 static void myStaticMethod() { // Static method
+		 System.out.println("Static methods can be called without creating objects");
+	}
+	 
+	 public void myPublicMethod() {  // Public method
+		    System.out.println("Public methods must be called by creating objects");
+	}
+	 
+	  public static void main(String[] args) {	  // Main method
+
+	    myStaticMethod(); // Call the static method
+	    // myPublicMethod(); This would compile an error
+
+	    Main myObj = new Main(); // Create an object of Main
+	    myObj.myStaticMethod(); // Call the public method on the object
+	 
+	  }	 
+}

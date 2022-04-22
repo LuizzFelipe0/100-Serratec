@@ -1,0 +1,5 @@
+package entidade1;
+
+public abstract class Funcionario {
+
+}

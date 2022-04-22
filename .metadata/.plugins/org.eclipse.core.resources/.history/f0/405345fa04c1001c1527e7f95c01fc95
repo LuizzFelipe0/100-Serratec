@@ -1,0 +1,50 @@
+package enums;
+
+public enum MarcasTV {
+	OUTRO(0,"Outros"),
+	SAMSUNG(1,"Samsung"),
+	LG(2,"LG"),
+	PHILCO(3,"Philco"),
+	SONY(4,"Sony"),
+	PANASONIC(5,"Panasonic"),
+	SEMP_TOSHIBA(6,"Toshiba");
+	
+	private int codMarca;
+	private String nomeMarca;
+
+	
+	private MarcasTV(int codMarca,String nomeMarca) {
+		this.setCodMarca(codMarca);
+		this.setNomeMarca(nomeMarca);
+	}
+	public static MarcasTV getMarcasTVPorNomeMarca(String nomeMarca) {
+		MarcasTV[] vetorMarcas = MarcasTV.values();
+ 		
+		//Para marca do tipo MarcasTV em 
+		for (MarcasTV marcaAtual : vetorMarcas) {
+			String nomeMarcaAtualMinusculo = marcaAtual.getNomeMarca().toLowerCase();
+			if (nomeMarcaAtualMinusculo.equals()) {
+				return marcaAtual;
+			}
+		}
+		return MarcasTV.OUTRO;
+	}
+
+	public int getCodMarca() {
+		return codMarca;
+	}
+
+	public void setCodMarca(int codMarca) {
+		this.codMarca = codMarca;
+	}
+
+	public String getNomeMarca() {
+		return nomeMarca;
+	}
+
+	public void setNomeMarca(String nomeMarca) {
+		this.nomeMarca = nomeMarca;
+	}
+	
+	
+}

@@ -1,0 +1,15 @@
+package exercicios;
+
+public class Exercicio2 {
+
+	public static void main(String[] args) {
+		
+		int n1=9, n2=8,n3=10,n4=9;
+		String nome = "Luiz";
+		
+		System.out.printf("A média de é = %.2f",(n1+n2+n3+n4)/4);
+		
+
+	}
+
+}

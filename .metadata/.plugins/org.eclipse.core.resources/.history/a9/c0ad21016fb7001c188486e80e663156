@@ -1,0 +1,19 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String nome = "João";
+		int id = 20;
+		double peso = 52.5;
+		double alt = 1.75;
+		
+		System.out.println("O funcionário " + nome +"tem:\n");
+		System.out.println("idade:" + id +"\n");
+		System.out.println("peso: " + peso +"\n");
+		System.out.println("altura: " + alt );
+
+	}
+
+}

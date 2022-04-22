@@ -1,0 +1,17 @@
+package estudo;
+
+public class TestePessoa {
+
+	public static void main(String[] args) {
+
+		Pessoa pessoa = new Pessoa();
+
+		pessoa.idPessoa = 957340;
+		pessoa.altura = 1.80;
+		pessoa.peso = 84.0;
+		pessoa.nome = "Luiz Felipe";
+
+		System.out.println(pessoa.nome + ",você está " + pessoa.resultado());
+	}
+
+}

@@ -1,0 +1,9 @@
+package two;
+
+public class Pessoa {
+	
+	private String name; // private = restricted access
+
+
+}
+

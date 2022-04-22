@@ -1,0 +1,27 @@
+package aulas;
+
+public class Exercicio {
+
+	public static void main(String[] args) {
+		
+		String nome = "Jo�o";
+	    double n1 = 8,n2 = 9,n3 = 10,n4 = 9;
+	    
+		
+		System.out.println( nome +" teve m�dia:\n");
+		System.out.println((n1+n2+n3+n4)/4 + " nas 4 mat�rias");
+		
+		/* Outro c�digo */
+		
+		int a =15;
+		int b=5;
+		int soma = a+b;
+		double div = a/b;
+		double mult = a*b;
+		System.out.println("\n\nsoma:"+soma+"\ndivis�o:"+div+"\nmultiplica��o"+mult);
+		
+	
+
+	}
+
+}

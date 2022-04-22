@@ -1,0 +1,12 @@
+package two;
+
+public class P2 {
+
+	public static void main(String[] args) {
+		Pessoa myObj = new Pessoa();
+		
+		 myObj.nome = "John";  // 
+		 System.out.println(myObj.nome); 
+	}
+
+}

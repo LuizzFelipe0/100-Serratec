@@ -1,0 +1,17 @@
+package two;
+
+public class Pessoa {
+	
+	public String nome; // private = restricted access
+
+	// Getter
+	  public String getNome() {
+	    return nome;
+	  }
+	  
+	// Setter
+	  public void setNome(String novoNome) {
+	    this.nome = novoNome;
+	  }
+}
+
