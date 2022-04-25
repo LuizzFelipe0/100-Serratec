@@ -18,9 +18,17 @@
     <fullyQualifiedTypeName name="entidadesImovel.Casa"/>
     <fullyQualifiedTypeName name="entidadesImovel.Apto"/>
     <fullyQualifiedTypeName name="entidadesImovel.Proprietario"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="br.com.serratec.entidade.Policial"/>
     <fullyQualifiedTypeName name="br.com.serratec.entidade.PolicialFederal"/>
     <fullyQualifiedTypeName name="enums.MarcasTV"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.util.Calendar"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
+    <fullyQualifiedTypeName name="java.time.temporal.ChronoUnit"/>
+    <fullyQualifiedTypeName name="java.time.ZoneId"/>
+    <fullyQualifiedTypeName name="java.time.Period"/>
+    <fullyQualifiedTypeName name="java.time.Duration"/>
 </qualifiedTypeNameHistroy>
