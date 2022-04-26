@@ -3,52 +3,50 @@ package ExemploExcecoes;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class TesteMainComThrows {
-
+public class ExcecoesThrowsELeitor {
 	public static void main(String[] args) {
 		try {
-
 			Scanner leitor = new Scanner(System.in);
 
-			System.out.println("Insira o primeiro nº: ");
-			int n1 = leitor.nextInt();
+			System.out.print("Insira o primeiro número: ");
+			int numero1 = leitor.nextInt();
 
 			leitor.close();
-			int n2 = 0;
+			int numero2 = 0;
 
 			do {
-				System.out.println("Insira o segundo nº: ");
-
+				System.out.print("Insira o segundo número: ");
 				try {
-					n2 = leitor.nextInt();
+					numero2 = leitor.nextInt();
 					break;
 				} catch (InputMismatchException ie) {
-					System.out.println("Insira um número. Outros caracteres não são aceitos!");
-
+					System.out.println("Insira um número. Outros caracteres não são aceitos");
 				} finally {
+					// Executado se a exceção estourar ou não
 					leitor.nextLine();
 				}
 			} while (true);
 
-			// Tratamento para divisão por 0.
+			// Tratamento para divisão por 0
 			try {
-				double resultado = dividir(n1, n2);
-				System.out.println("Resultado: " + resultado);
-
+				double resultado = dividir(numero1, numero2);
+				System.out.println("Resultado divisão: " + resultado);
 			} catch (ArithmeticException excecaoMat) {
 				System.out.println("Valor inválido. Texto da Exceção: " + excecaoMat.getMessage());
 			}
 		} catch (IllegalStateException iStateExc) {
 			fecharPrograma("\nO scanner está fechado. Não consigo continuar :(");
 		}
+
 	}
 
 	public static int dividir(int n1, int n2) throws ArithmeticException {
 		return n1 / n2;
-
 	}
 
-	public static void fecharPrograma(String textFechamento) {
-		System.out.println(textFechamento);
+	public static void fecharPrograma(String textoFechamentoPrograma) {
+		System.out.println(textoFechamentoPrograma);
+		System.exit(1);
 	}
+
 }
