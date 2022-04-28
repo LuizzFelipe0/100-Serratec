@@ -1,5 +1,0 @@
-package entidade1;
-
-public interface Emprestimo {
-
-}

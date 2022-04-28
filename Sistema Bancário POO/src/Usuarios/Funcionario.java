@@ -17,6 +17,8 @@ public abstract class Funcionario extends User {
 
 	public static CargoFuncionario getCargo() {
 		return Funcionario.CargoFuncionario;
+		
+		
 
 	}
 }
