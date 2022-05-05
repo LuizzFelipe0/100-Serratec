@@ -1,0 +1,49 @@
+*{
+    background-color: indigo;
+}
+h1{
+    text-align: center;
+    text-decoration:underline aliceblue;
+    color: orangered;
+    font-size: 62%;
+    font-family: 'Gill Sans MT';
+}
+h2{
+    text-align: center;
+    color: orangered;
+    font-family: 'Gill Sans MT';
+}
+  .classe1:link{
+    color: blueviolet;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  .classe1:visited {
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  .classe1:hover{
+    color: orangered;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  .classe1:active {
+    color: rgb(30, 255, 0);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  .classe2:link, .classe2:visited {
+    background-color: orangered;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .classe2:hover, .classe2:active {
+    background-color: orange;
+  }
+ p{
+   color: aliceblue;
+ }
