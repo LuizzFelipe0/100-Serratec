@@ -1,0 +1,54 @@
+package br.com.serratec.model;
+
+import java.time.LocalDate;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Produto {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private String id;
+	
+	private String nome;
+	
+	private String descricao;
+	
+	private Double preco;
+	
+	private Integer QuantidadeEstoque;
+	
+	private LocalDate DataCadastroProduto;
+	
+	private String categoria_id;
+	
+	private String imagem;
+	
+	private String funcionario_id;
+
+	public Produto(String id, String nome, String descricao, Double preco, Integer quantidadeEstoque,
+			LocalDate dataCadastroProduto, String categoria_id, String imagem, String funcionario_id) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.descricao = descricao;
+		this.preco = preco;
+		QuantidadeEstoque = quantidadeEstoque;
+		DataCadastroProduto = dataCadastroProduto;
+		this.categoria_id = categoria_id;
+		this.imagem = imagem;
+		this.funcionario_id = funcionario_id;
+	}
+
+
+
+
+
+
+ 
+
+}

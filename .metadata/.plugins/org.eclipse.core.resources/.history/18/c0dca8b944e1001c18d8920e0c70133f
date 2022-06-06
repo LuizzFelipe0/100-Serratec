@@ -1,0 +1,12 @@
+package br.com.serratec.model;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Produto {
+	
+	private String id;
+	
+	private 
+
+}

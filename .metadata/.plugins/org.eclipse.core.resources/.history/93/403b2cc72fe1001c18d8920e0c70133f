@@ -1,0 +1,22 @@
+package br.com.serratec.Exceptions;
+
+public class ProdutoInválidoException extends Exception{
+	
+	private String mensagem;
+
+	public ProdutoInválidoException(String mensagem) {
+		super();
+		this.mensagem = mensagem;
+	}
+
+	public String getMensagem() {
+		return mensagem;
+	}
+
+	public void setMensagem(String mensagem) {
+		this.mensagem = mensagem;
+	}
+	
+	
+
+}

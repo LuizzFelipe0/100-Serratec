@@ -1,0 +1,5 @@
+package com.example.Eccomerce.dtos;
+
+public class PedidoDTO {
+
+}

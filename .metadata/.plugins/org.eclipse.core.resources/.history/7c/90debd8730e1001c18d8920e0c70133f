@@ -1,0 +1,27 @@
+package br.com.serratec.Exceptions;
+
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+
+@RestControllerAdvice
+public class ExceptionController {
+	
+
+	@ExceptionHandler(InvalidoCpfException.class)
+	public ResponseEntity<?> cpfInvalidoException(InvalidoCpfException exception){
+			HttpHeaders headers = new HttpHeaders();
+			headers.add("O Cpf é Inválido!", exception.getMensagem());
+			return new ResponseEntity<>(headers, HttpStatus.BAD_REQUEST);
+	}
+	
+	@ExceptionHandler(ProdutoInválidoException.class)
+	public ResponseEntity<?> produtoInexistenteException(ProdutoInválidoException exception){
+			HttpHeaders headers = new HttpHeaders();
+			headers.add("Produto Inválido!", exception.getMensagem());
+			return new ResponseEntity<>(headers, HttpStatus.BAD_REQUEST);
+	}
+}

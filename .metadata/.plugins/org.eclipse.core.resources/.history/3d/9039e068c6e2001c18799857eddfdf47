@@ -1,0 +1,20 @@
+package com.example.Eccomerce.dtos;
+
+import java.time.LocalDate;
+
+import javax.validation.constraints.NotBlank;
+
+public class PedidoDTO {
+	
+	@NotBlank
+	private Integer numeroPedido;
+	@NotBlank
+	private Double valorTotal;
+	@NotBlank
+	private String status;
+	@NotBlank
+	private LocalDate dataPedido;
+	@NotBlank
+	private LocalDate dataEntrega;
+
+}

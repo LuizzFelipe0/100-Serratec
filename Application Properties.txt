@@ -1,0 +1,27 @@
+
+BANCO DE DADOS POSTGRESSQL
+
+spring.h2.console.enabled=true
+
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
+spring.datasource.username=postgres
+spring.datasource.password=123
+
+spring.jpa.generate-ddl=true
+
+----------------------------------------------------------------------------------
+
+
+H2
+
+spring.h2.console.enabled=true
+
+
+spring.datasource.url=jdbc:h2:file:./h2/conta;DB_CLOSE_DELAY=-1
+spring.datasource.username=sa
+spring.datasource.password=sa
+
+spring.jpa.show-sql=true
+
+spring.jpa.generate-ddl=true

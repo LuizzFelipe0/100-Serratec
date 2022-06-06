@@ -1,0 +1,35 @@
+package com.example.Eccomerce.Service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.Eccomerce.Exception.IdNaoFornecidoException;
+import com.example.Eccomerce.Model.Funcionario;
+import com.example.Eccomerce.Model.Pedido;
+import com.example.Eccomerce.Repository.ClienteRepository;
+import com.example.Eccomerce.Repository.PedidoRepository;
+import com.example.Eccomerce.Repository.ProdutoRepository;
+import com.example.Eccomerce.Repository.RepositoryFuncionario;
+
+@Service
+public class PedidoService {
+
+	@Autowired
+	PedidoRepository pedidoR;
+
+	@Autowired
+	ProdutoRepository produtoR;
+
+	@Autowired
+	RepositoryFuncionario funcionarioR;
+
+	@Autowired
+	ClienteRepository clienteR;
+
+public Pedido inserirPedido(Pedido pedido) {
+	if(pedido.getFuncionario_id().getId() == null) {
+		throw new IdNaoFornecidoException("Não foi fornecido o Id do Funcionário!");
+}
+	Funcionario funcionario = 
+}
+}

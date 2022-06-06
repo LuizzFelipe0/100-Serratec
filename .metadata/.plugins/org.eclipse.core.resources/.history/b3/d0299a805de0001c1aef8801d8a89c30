@@ -1,0 +1,26 @@
+package parkingControl;
+
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Service;
+
+import models.ParkingSpotModel;
+import repositories.ParkingSpotRepository;
+
+@Service
+public class ParkingSpotService {
+
+	final ParkingSpotRepository psr;
+	
+	public ParkingSpotService(ParkingSpotRepository psr) {
+		this.psr =psr;
+	}
+	
+	@Transactional
+	public ParkingSpotModel save(ParkingSpotModel psm) {
+		return psr.save(psm) ;
+	}
+	
+	
+	
+}

@@ -1,0 +1,48 @@
+package com.example.Eccomerce.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.Eccomerce.Exception.CategoriaExisteException;
+import com.example.Eccomerce.Exception.CategoriaNaoEcontradoException;
+import com.example.Eccomerce.Exception.PedidoExisteException;
+import com.example.Eccomerce.Exception.PedidoNaoEcontradoException;
+import com.example.Eccomerce.Model.Categoria;
+import com.example.Eccomerce.Model.Pedido;
+import com.example.Eccomerce.Repository.CategoriaRepository;
+
+@Service
+public class CategoriaService {
+
+	@Autowired
+	CategoriaRepository categoriaR;
+
+	public List<Categoria> listarTudo() {
+		return categoriaR.findAll();
+	}
+
+	// get
+	public Categoria listarCategoria(Integer id) throws CategoriaNaoEcontradoException {
+		Optional<Categoria> optional = categoriaR.findById(id);
+		if (optional.isEmpty()) {
+			throw new CategoriaNaoEcontradoException("A Categoria não foi encontrada!");
+		}
+		return optional.get();
+	}
+
+	public void verificarCategoriaExiste(Categoria categoria) throws CategoriaExisteException {
+		Optional<Categoria> optional = categoriaR.findById(categoria.getId());
+		if (optional.isPresent()) {
+			throw new CategoriaExisteException("Categoria já cadastrada!");
+		}
+	}
+
+	// post
+	public void criarCategoria(Categoria categoria) throws CategoriaExisteException {
+		verificarCategoriaExiste(categoria);
+		categoriaR.save(categoria);
+	}
+}

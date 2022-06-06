@@ -1,0 +1,90 @@
+package com.example.Eccomerce.dtos;
+
+import java.time.LocalDate;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
+import com.example.Eccomerce.Model.Pedido;
+
+public class PedidoDTO {
+
+	@NotNull
+	@NotBlank
+	private Integer id;
+	
+	@NotNull
+	@NotBlank
+	private Integer numeroPedido;
+	
+	@NotNull
+	@NotBlank
+	private Double valorTotal;
+	
+	@NotNull
+	@NotBlank
+	private String status;
+	
+	@NotNull
+	@NotBlank
+	private LocalDate dataPedido;
+	
+	@NotNull
+	@NotBlank
+	private LocalDate dataEntrega;
+
+	public PedidoDTO( Pedido pedido) {
+		super();
+		this.numeroPedido = pedido.getNumeroPedido();
+		this.valorTotal = pedido.getValorTotal();
+		this.status = pedido.getStatus();
+		this.dataPedido = pedido.getDataPedido();
+		this.dataEntrega = pedido.getDataEntrega();
+		this.id= pedido.getId();
+	}
+
+	public Integer getNumeroPedido() {
+		return numeroPedido;
+	}
+
+	public void setNumeroPedido(Integer numeroPedido) {
+		this.numeroPedido = numeroPedido;
+	}
+
+	public Double getValorTotal() {
+		return valorTotal;
+	}
+
+	public void setValorTotal(Double valorTotal) {
+		this.valorTotal = valorTotal;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public LocalDate getDataPedido() {
+		return dataPedido;
+	}
+
+	public void setDataPedido(LocalDate dataPedido) {
+		this.dataPedido = dataPedido;
+	}
+
+	public LocalDate getDataEntrega() {
+		return dataEntrega;
+	}
+
+	public void setDataEntrega(LocalDate dataEntrega) {
+		this.dataEntrega = dataEntrega;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+}

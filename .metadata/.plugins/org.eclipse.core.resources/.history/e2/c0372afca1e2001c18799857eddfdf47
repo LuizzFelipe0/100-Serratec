@@ -1,0 +1,18 @@
+package com.example.Eccomerce.Service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.Eccomerce.Repository.PedidoRepository;
+import com.example.Eccomerce.Repository.ProdutoRepository;
+
+@Service
+public class PedidoService {
+	
+@Autowired 
+PedidoRepository pedidoR;
+
+@Autowired 
+ProdutoRepository produtoR;
+
+}

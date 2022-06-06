@@ -1,0 +1,40 @@
+package com.example.Eccomerce;
+
+import java.time.LocalDate;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
+import com.example.Eccomerce.Model.Pedido;
+import com.example.Eccomerce.Model.Produto;
+
+public class PedidoDTO {
+	
+	@NotNull
+	private Integer id;
+	
+	@NotNull
+	private Integer numeroPedido;
+	
+	@NotBlank
+	private Double valorTotal;
+
+	@NotBlank
+	private LocalDate dataPedido;
+	
+	@NotBlank
+	private LocalDate dataEntrega;
+
+	public PedidoDTO(Pedido pedido) {
+		super();
+		this.id = pedido.getId();
+		this.numeroPedido = pedido.getNumeroPedido();
+		this.valorTotal = pedido.getValorTotal();
+		this.dataPedido = pedido.getDataPedido();
+		this.dataEntrega = pedido.getDataEntrega();
+	}
+	
+	
+
+
+}

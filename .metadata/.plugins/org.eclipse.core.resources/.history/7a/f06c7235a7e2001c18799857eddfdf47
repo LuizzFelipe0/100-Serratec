@@ -1,0 +1,35 @@
+package com.example.Eccomerce.Service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.Eccomerce.Exception.PedidoNaoEcontradoException;
+import com.example.Eccomerce.Model.Pedido;
+import com.example.Eccomerce.Repository.PedidoRepository;
+import com.example.Eccomerce.Repository.ProdutoRepository;
+
+@Service
+public class PedidoService {
+
+	@Autowired
+	PedidoRepository pedidoR;
+
+	@Autowired
+	ProdutoRepository produtoR;
+
+	public void criarPedido(Pedido pedido) {
+		pedidoR.save(pedido);
+	}
+
+	public void deletarPedido(Integer id) throws PedidoNaoEcontradoException {
+		Optional<Pedido> optional = pedidoR.findById(id);
+
+		if (optional.isEmpty()) {
+			throw new PedidoNaoEcontradoException("O Pedido não foi encontrado!");
+		}
+		pedidoR.deleteById(id);
+	}
+
+}

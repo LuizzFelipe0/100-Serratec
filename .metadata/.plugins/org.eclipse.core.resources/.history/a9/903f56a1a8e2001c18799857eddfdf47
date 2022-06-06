@@ -1,0 +1,57 @@
+package com.example.Eccomerce.Service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.Eccomerce.Exception.PedidoExisteException;
+import com.example.Eccomerce.Exception.PedidoNaoEcontradoException;
+import com.example.Eccomerce.Exception.ProdutoExisteException;
+import com.example.Eccomerce.Model.Pedido;
+import com.example.Eccomerce.Repository.PedidoRepository;
+import com.example.Eccomerce.Repository.ProdutoRepository;
+
+@Service
+public class PedidoService {
+
+	@Autowired
+	PedidoRepository pedidoR;
+
+	@Autowired
+	ProdutoRepository produtoR;
+
+	public void criarPedido(Pedido pedido) {
+		pedidoR.save(pedido);
+	}
+
+	public void verificarPedidoExiste(Pedido pedido) throws PedidoExisteException {
+		Optional<Pedido> optional = pedidoR.findById(pedido.getId());
+		if (optional.isPresent()) {
+			throw new PedidoExisteException("Pedido já cadastrado!");
+		}
+	}
+
+	public void deletarPedido(Integer id) throws PedidoNaoEcontradoException {
+		Optional<Pedido> optional = pedidoR.findById(id);
+
+		if (optional.isEmpty()) {
+			throw new PedidoNaoEcontradoException("O Pedido não foi encontrado!");
+		}
+		pedidoR.deleteById(id);
+	}
+	
+	public Pedido editarPedido(Pedido pedido, Integer id) throws PedidoExisteException, PedidoNaoEcontradoException {
+		Optional<Pedido> optional = pedidoR.findById(id);
+		if (optional.isEmpty()) {
+			throw new PedidoNaoEcontradoException("O Pedido não foi encontrado!");
+		}
+		Pedido pedidoOld = optional.get();
+		if (!pedido.getNumeroPedido().equals("") && pedido.getId() != null) {
+			verificarPedidoExiste(pedido);
+			pedidoOld.setNumeroPedido(pedido.getNumeroPedido());
+		}
+		
+		return pedidoR.save(pedido);
+	}
+}

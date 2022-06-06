@@ -1,0 +1,33 @@
+package com.example.Eccomerce.Service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.Eccomerce.Exception.IdNaoFornecidoException;
+import com.example.Eccomerce.Model.Funcionario;
+import com.example.Eccomerce.Model.Pedido;
+import com.example.Eccomerce.Repository.ClienteRepository;
+import com.example.Eccomerce.Repository.PedidoRepository;
+import com.example.Eccomerce.Repository.ProdutoRepository;
+import com.example.Eccomerce.Repository.RepositoryFuncionario;
+
+@Service
+public class PedidoService {
+
+	@Autowired
+	PedidoRepository pedidoR;
+
+	@Autowired
+	ProdutoRepository produtoR;
+
+	@Autowired
+	ClienteRepository clienteR;
+
+	
+	
+		
+
+	}
+}

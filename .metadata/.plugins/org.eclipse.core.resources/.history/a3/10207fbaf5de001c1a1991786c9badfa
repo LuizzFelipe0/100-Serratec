@@ -1,0 +1,15 @@
+package services;
+
+import org.springframework.stereotype.Service;
+
+import repositories.ParkingSpotRepository;
+
+@Service
+public class ParkingSpotService {
+
+	final ParkingSpotRepository psr;
+	
+	public ParkingSpotService(ParkingSpotRepository psr) {
+		this.psr =psr;
+	}
+}
